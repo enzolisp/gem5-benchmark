@@ -19,9 +19,9 @@ CACHES_FILE="orgb_configs/systems/caches/basic_caches.py"
 CPU_FILE="orgb_configs/systems/cpus/MyO3CPU.py"
 
 # Linhas dos parâmetros na config fixa
-L1D_LINE=28          # size = '64kB'         (BasicL1DCache)
-ISSUEWIDTH_LINE=182  # issueWidth =  4
-NUMROBENT=164     # count = 1             (MyMemUnit)
+L1D_LINE=28         # size = '64kB'         (BasicL1DCache)
+ISSUEWIDTH_LINE=182 # issueWidth =  4
+NUMROBENT=164       # count = 1             (MyMemUnit)
 
 declare -A BENCHMARKS=(
   [aes128]="$ROOT_DIR/orgb_progs/aes128_O0"
@@ -34,7 +34,7 @@ run_gem5() {
   mkdir -p "$outdir"
   echo ">> $(basename "$bin") -> ${outdir#$RESULTS_DIR/}"
   (./gem5 --outdir="$outdir" "$SIM_SCRIPT" run-benchmark -c "$bin") \
-    > "$outdir/run.log" 2>&1
+    >"$outdir/run.log" 2>&1
 }
 
 run_all_benchmarks() {
@@ -67,7 +67,7 @@ done
 patch_line "$CPU_FILE" "$ISSUEWIDTH_LINE" "    issueWidth    =  4 # Issue width"
 
 echo "=== Variando NumRob count ==="
-for c in 32 64 256; do
+for c in 16 32 64; do
   patch_line "$CPU_FILE" "$NUMROBENT" "     numROBEntries = ${c}"
   run_all_benchmarks "numRob_${c}"
 done
