@@ -176,7 +176,7 @@ class MyO3CPU(DerivO3CPU):
 ############################################################
 
     fetchWidth    =  4 # Fetch width
-    decodeWidth   =  2 # Decode width
+    decodeWidth   =  4 # Decode width
     renameWidth   =  2 # Rename width
     dispatchWidth =  2 # Dispatch width
     issueWidth    =  4 # Issue width

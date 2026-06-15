@@ -53,7 +53,7 @@ echo "=== Config fixa (base) ==="
 run_all_benchmarks "fixed"
 
 echo "=== Variando L1D size ==="
-for size in 16kB 64kB 128kB; do
+for size in 8kB 16kB 64kB; do
   patch_line "$CACHES_FILE" "$L1D_LINE" "    size = '${size}'"
   run_all_benchmarks "l1d_${size}"
 done
