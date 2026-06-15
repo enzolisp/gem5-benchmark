@@ -60,7 +60,7 @@ done
 patch_line "$CACHES_FILE" "$L1D_LINE" "    size = '32kB'"
 
 echo "=== Variando issueWidth ==="
-for w in 2 6 8; do
+for w in 1 2 3; do
   patch_line "$CPU_FILE" "$ISSUEWIDTH_LINE" "    issueWidth    =  ${w} # Issue width"
   run_all_benchmarks "issuewidth_${w}"
 done
