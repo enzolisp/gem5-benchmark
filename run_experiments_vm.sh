@@ -24,9 +24,9 @@ ISSUEWIDTH_LINE=182 # issueWidth =  4
 NUMROBENT=164       # count = 1             (MyMemUnit)
 
 declare -A BENCHMARKS=(
-  [aes128]="$ROOT_DIR/orgb_progs/aes128_O0"
-  [rc4]="$ROOT_DIR/orgb_progs/rc4_O0"
-  [xor]="$ROOT_DIR/orgb_progs/xor_cipher_O0"
+  [matmul]="$ROOT_DIR/orgb_progs/matmul_O0"
+  [saxpy]="$ROOT_DIR/orgb_progs/saxpy_O0"
+  [collatz]="$ROOT_DIR/orgb_progs/collatz_O0"
 )
 
 run_gem5() {
