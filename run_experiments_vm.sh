@@ -68,10 +68,10 @@ patch_line "$CPU_FILE" "$ISSUEWIDTH_LINE" "    issueWidth    =  4 # Issue width"
 
 echo "=== Variando NumRob count ==="
 for c in 16 32 64; do
-  patch_line "$CPU_FILE" "$NUMROBENT" "     numROBEntries = ${c}"
+  patch_line "$CPU_FILE" "$NUMROBENT" "    numROBEntries = ${c}"
   run_all_benchmarks "numRob_${c}"
 done
-patch_line "$CPU_FILE" "$NUMROBENT" "     numROBEntries =   128"
+patch_line "$CPU_FILE" "$NUMROBENT" "    numROBEntries =   128"
 
 echo ""
 echo "Done. Resultados em $RESULTS_DIR/"
