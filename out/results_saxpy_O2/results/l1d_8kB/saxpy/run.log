@@ -1,0 +1,49 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 10 2018 09:10:35
+gem5 started Jun 15 2026 20:48:42
+gem5 executing on orgb-VirtualBox, pid 13431
+command line: ./gem5 --outdir=/home/orgb/gem5/results/l1d_8kB/saxpy orgb_configs/simulate.py run-benchmark -c /home/orgb/gem5/orgb_progs/saxpy_O0
+
+[95m***************************************************************************[0m
+[95m********************** gem5 configuration script **************************[0m
+[95m***************************** simulate.py *********************************[0m
+[95m***************************************************************************[0m
+
+[94mSetting up system ...[0m
+[93mUsing MyO3CPU CPU.[0m
+[92mDone.[0m
+
+[94mSetting up the process to run ...[0m
+[93mCustom benchmark selected.[0m
+[93mCommand           : /home/orgb/gem5/orgb_progs/saxpy_O0[0m
+[93mCommand-line args : (none)[0m
+[92mDone[0m
+
+[94mSetting environmental variables ...[0m
+[93m(no environmental variables to set)[0m
+[92mDone[0m
+
+[94mInstantiating process ...[0m
+[94mProgram to run: /home/orgb/gem5/orgb_progs/saxpy_O0 [0m
+[92mDone[0m
+
+[94mInstantiating system ...[0m
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+[92mDone[0m
+
+[95m*********************** Beginning gem5 simulation ************************[0m
+info: Entering event queue @ 0.  Starting simulation...
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/orgb/gem5/orgb_progs/saxpy_O0'
+info: Increasing stack size by one page.
+warn: ignoring syscall access(...)
+checksum: 52405317632.000000
+[95m**************************************************************************[0m
+[92mDone.[0m
+[92mFinished at tick 112202277500.[0m
+[92mStatus: exiting with last active thread context.[0m
+[95m**************************************************************************[0m
